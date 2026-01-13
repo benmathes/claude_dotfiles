@@ -1,0 +1,4 @@
+# Keep only CLAUDE.md, ignore everything else
+*
+!.gitignore
+!CLAUDE.md
