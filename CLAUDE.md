@@ -42,3 +42,13 @@ Organize design docs by implementation status:
 - `designs/built/` - Implemented features
 
 No design files should live directly in `designs/` - always use the appropriate subfolder. When a feature is implemented, move its design doc from `designs/unbuilt/` to `designs/built/`. Update any symlinks in `.claude/commands/` accordingly.
+
+## Post-Feature Consolidation Check
+After completing any feature, ask: "What does this replace, overlap with, or obsolete?"
+
+If consolidation candidates exist:
+1. Discuss with user before any removal
+2. Create structured entry in `designs/unbuilt/consolidation-<name>.md`
+3. Split removal work to a separate branch
+
+This guards against: feature bloat, combinatorial state/bug explosion, and pager burden. These systems must be maintainable by one person.
